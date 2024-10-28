@@ -1,19 +1,57 @@
-The code you provided is an implementation of a maze solver using various search algorithms in Pygame. The program allows you to load a maze from a CSV file, choose a search algorithm, and visualize the solution path in a graphical user interface.
+# Maze Solver
 
-To run the program, you need to have Pygame installed. You can install Pygame by running the following command in your terminal or command prompt:
+A Python implementation of various pathfinding algorithms visualized using Pygame. This program allows you to load mazes from CSV files and solve them using different search algorithms with a graphical visualization of the solution path.
 
+## Installation
+
+Before running the program, ensure you have Pygame installed:
+
+```bash
 pip install pygame
+```
 
-Once Pygame is installed, you can run the program.
+## Usage
 
-To use the program, you will be prompted to enter the maze file, enable verbose mode (optional), specify the reporting interval, pausing interval, and choose a search algorithm. The available search algorithms are:
+When you run the program, you'll be prompted to:
+1. Enter the maze file path
+2. Enable/disable verbose mode
+3. Specify the reporting interval
+4. Set the pausing interval
+5. Choose a search algorithm
 
-Depth-First Search (DFS)
-Breadth-First Search (BFS)
-Greedy Best-First Search (GBFS) using Manhattan Distance
-Greedy Best-First Search (GBFS) using Euclidean Distance
-A* Search using Manhattan Distance
-A* Search using Euclidean Distance
-After selecting a search algorithm, the program will run the chosen algorithm on the maze and display the solution path in the Pygame window. If verbose mode is enabled, the program will provide additional information during the search process.
+### Available Search Algorithms
 
-Note that the maze should be in CSV format, where each cell in the maze is represented by a character. The 'S' character represents the start position, the 'E' character represents the goal position, the '1' character represents a wall, and any other character represents an empty space.
+- Depth-First Search (DFS)
+- Breadth-First Search (BFS)
+- Greedy Best-First Search (GBFS)
+  - Using Manhattan Distance
+  - Using Euclidean Distance
+- A* Search
+  - Using Manhattan Distance
+  - Using Euclidean Distance
+
+## Maze File Format
+
+The maze should be provided in CSV format with the following cell representations:
+
+- `S`: Start position
+- `E`: Goal/End position
+- `1`: Wall
+- Any other character: Empty space
+
+## Visualization
+
+The program uses Pygame to create a graphical visualization of:
+- The maze layout
+- The search process
+- The final solution path
+
+When verbose mode is enabled, additional information about the search process will be displayed during execution.
+
+## Features
+
+- Multiple pathfinding algorithm implementations
+- Real-time visualization of the search process
+- Configurable execution parameters
+- Support for custom maze layouts
+- Optional verbose output for debugging and learning
